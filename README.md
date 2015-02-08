@@ -77,24 +77,12 @@ Example of the result:
                       "Type":"Shipping"
                    },
                    ">":{
-                      "Name":{
-                         "$":"Ellen Adams"
-                      },
-                      "Street":{
-                         "$":"123 Maple Street"
-                      },
-                      "City":{
-                         "$":"Mill Valley"
-                      },
-                      "State":{
-                         "$":"CA"
-                      },
-                      "Zip":{
-                         "$":"10999"
-                      },
-                      "Country":{
-                         "$":"USA"
-                      }
+                      "Name":"Ellen Adams",
+                      "Street":"123 Maple Street",
+                      "City":"Mill Valley",
+                      "State":"CA",
+                      "Zip":"10999",
+                      "Country":"USA"
                    }
                 },
                 {
@@ -102,30 +90,16 @@ Example of the result:
                       "Type":"Billing"
                    },
                    ">":{
-                      "Name":{
-                         "$":"Tai Yee"
-                      },
-                      "Street":{
-                         "$":"8 Oak Avenue"
-                      },
-                      "City":{
-                         "$":"Old Town"
-                      },
-                      "State":{
-                         "$":"PA"
-                      },
-                      "Zip":{
-                         "$":"95819"
-                      },
-                      "Country":{
-                         "$":"USA"
-                      }
+                      "Name":"Tai Yee",
+                      "Street":"8 Oak Avenue",
+                      "City":"Old Town",
+                      "State":"PA",
+                      "Zip":"95819",
+                      "Country":"USA"
                    }
                 }
              ],
-             "DeliveryNotes":{
-                "$":"Please leave packages in shed by driveway."
-             },
+             "DeliveryNotes":"Please leave packages in shed by driveway.",
              "Items":{
                 ">":{
                    "Item":[
@@ -134,18 +108,10 @@ Example of the result:
                             "PartNumber":"872-AA"
                          },
                          ">":{
-                            "ProductName":{
-                               "$":"Lawnmower"
-                            },
-                            "Quantity":{
-                               "$":"1"
-                            },
-                            "USPrice":{
-                               "$":"148.95"
-                            },
-                            "Comment":{
-                               "$":"Confirm this is electric"
-                            }
+                            "ProductName":"Lawnmower",
+                            "Quantity":"1",
+                            "USPrice":"148.95",
+                            "Comment":"Confirm this is electric"
                          }
                       },
                       {
@@ -153,18 +119,10 @@ Example of the result:
                             "PartNumber":"926-AA"
                          },
                          ">":{
-                            "ProductName":{
-                               "$":"Baby Monitor"
-                            },
-                            "Quantity":{
-                               "$":"2"
-                            },
-                            "USPrice":{
-                               "$":"39.98"
-                            },
-                            "ShipDate":{
-                               "$":"1999-05-21"
-                            }
+                            "ProductName":"Baby Monitor",
+                            "Quantity":"2",
+                            "USPrice":"39.98",
+                            "ShipDate":"1999-05-21"
                          }
                       }
                    ]
@@ -190,7 +148,7 @@ var partNumber = json.PurchaseOrder[">"].Items[">"].Item[0]["@"].PartNumber;
 If you want to access the "Delivery Notes" value you just need to:
 
 ```javascript
-var partNumber = json.PurchaseOrder[">"].DeliveryNotes["$"];
+var partNumber = json.PurchaseOrder[">"].DeliveryNotes;
 ```
 
 ## Basic Usage

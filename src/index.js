@@ -31,6 +31,9 @@ function addNode(node, obj){
     if(_obj['$'].length === 0){
         delete _obj['$'];
     }
+    if(Object.keys(_obj).length === 1 && _obj['$'] != null){
+        obj[node.name] = _obj['$'];
+    }
 }
 function converter(xml, callback){
     var jsObj = {};
