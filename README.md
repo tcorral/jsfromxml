@@ -70,14 +70,12 @@ Example of the result:
              "PurchaseOrderNumber":"99503",
              "OrderDate":"1999-10-20"
           },
-          "$":"\n    \n    \n    \n    \n",
           ">":{
              "Address":[
                 {
                    "@":{
                       "Type":"Shipping"
                    },
-                   "$":"\n        \n        \n        \n        \n        \n        \n    ",
                    ">":{
                       "Name":{
                          "$":"Ellen Adams"
@@ -103,7 +101,6 @@ Example of the result:
                    "@":{
                       "Type":"Billing"
                    },
-                   "$":"\n        \n        \n        \n        \n        \n        \n    ",
                    ">":{
                       "Name":{
                          "$":"Tai Yee"
@@ -130,14 +127,12 @@ Example of the result:
                 "$":"Please leave packages in shed by driveway."
              },
              "Items":{
-                "$":"\n        \n        \n    ",
                 ">":{
                    "Item":[
                       {
                          "@":{
                             "PartNumber":"872-AA"
                          },
-                         "$":"\n            \n            \n            \n            \n        ",
                          ">":{
                             "ProductName":{
                                "$":"Lawnmower"
@@ -157,7 +152,6 @@ Example of the result:
                          "@":{
                             "PartNumber":"926-AA"
                          },
-                         "$":"\n            \n            \n            \n            \n        ",
                          ">":{
                             "ProductName":{
                                "$":"Baby Monitor"

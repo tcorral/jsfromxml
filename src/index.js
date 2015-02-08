@@ -4,7 +4,7 @@ function addNode(node, obj){
     var arr = [];
     var _obj = {
         '@': node.attr,
-        '$': node.val,
+        '$': node.val.replace(/\n/gi, '').trim(),
         '>': {}
     };
 
@@ -25,10 +25,10 @@ function addNode(node, obj){
     if(node.children.length === 0){
         delete _obj['>'];
     }
-    if(Object.keys(node.attr).length === 0){
+    if(Object.keys(_obj['@']).length === 0){
         delete _obj['@'];
     }
-    if(node.val.length === 0){
+    if(_obj['$'].length === 0){
         delete _obj['$'];
     }
 }
