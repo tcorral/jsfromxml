@@ -21,6 +21,16 @@ function addNode(node, obj){
     node.children.forEach(function (child){
         addNode(child, _obj['>']);
     });
+
+    if(node.children.length === 0){
+        delete _obj['>'];
+    }
+    if(Object.keys(node.attr).length === 0){
+        delete _obj['@'];
+    }
+    if(node.val.length === 0){
+        delete _obj['$'];
+    }
 }
 function converter(xml, callback){
     var jsObj = {};
