@@ -1,6 +1,6 @@
 {
   "name": "jsfromxml",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parse xml to real json object",
   "main": "src/index.js",
   "scripts": {

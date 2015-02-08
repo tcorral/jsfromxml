@@ -80,58 +80,22 @@ Example of the result:
                    "$":"\n        \n        \n        \n        \n        \n        \n    ",
                    ">":{
                       "Name":{
-                         "@":{
-
-                         },
-                         "$":"Ellen Adams",
-                         ">":{
-
-                         }
+                         "$":"Ellen Adams"
                       },
                       "Street":{
-                         "@":{
-
-                         },
-                         "$":"123 Maple Street",
-                         ">":{
-
-                         }
+                         "$":"123 Maple Street"
                       },
                       "City":{
-                         "@":{
-
-                         },
-                         "$":"Mill Valley",
-                         ">":{
-
-                         }
+                         "$":"Mill Valley"
                       },
                       "State":{
-                         "@":{
-
-                         },
-                         "$":"CA",
-                         ">":{
-
-                         }
+                         "$":"CA"
                       },
                       "Zip":{
-                         "@":{
-
-                         },
-                         "$":"10999",
-                         ">":{
-
-                         }
+                         "$":"10999"
                       },
                       "Country":{
-                         "@":{
-
-                         },
-                         "$":"USA",
-                         ">":{
-
-                         }
+                         "$":"USA"
                       }
                    }
                 },
@@ -142,75 +106,30 @@ Example of the result:
                    "$":"\n        \n        \n        \n        \n        \n        \n    ",
                    ">":{
                       "Name":{
-                         "@":{
-
-                         },
-                         "$":"Tai Yee",
-                         ">":{
-
-                         }
+                         "$":"Tai Yee"
                       },
                       "Street":{
-                         "@":{
-
-                         },
-                         "$":"8 Oak Avenue",
-                         ">":{
-
-                         }
+                         "$":"8 Oak Avenue"
                       },
                       "City":{
-                         "@":{
-
-                         },
-                         "$":"Old Town",
-                         ">":{
-
-                         }
+                         "$":"Old Town"
                       },
                       "State":{
-                         "@":{
-
-                         },
-                         "$":"PA",
-                         ">":{
-
-                         }
+                         "$":"PA"
                       },
                       "Zip":{
-                         "@":{
-
-                         },
-                         "$":"95819",
-                         ">":{
-
-                         }
+                         "$":"95819"
                       },
                       "Country":{
-                         "@":{
-
-                         },
-                         "$":"USA",
-                         ">":{
-
-                         }
+                         "$":"USA"
                       }
                    }
                 }
              ],
              "DeliveryNotes":{
-                "@":{
-
-                },
-                "$":"Please leave packages in shed by driveway.",
-                ">":{
-
-                }
+                "$":"Please leave packages in shed by driveway."
              },
              "Items":{
-                "@":{
-
-                },
                 "$":"\n        \n        \n    ",
                 ">":{
                    "Item":[
@@ -221,40 +140,16 @@ Example of the result:
                          "$":"\n            \n            \n            \n            \n        ",
                          ">":{
                             "ProductName":{
-                               "@":{
-
-                               },
-                               "$":"Lawnmower",
-                               ">":{
-
-                               }
+                               "$":"Lawnmower"
                             },
                             "Quantity":{
-                               "@":{
-
-                               },
-                               "$":"1",
-                               ">":{
-
-                               }
+                               "$":"1"
                             },
                             "USPrice":{
-                               "@":{
-
-                               },
-                               "$":"148.95",
-                               ">":{
-
-                               }
+                               "$":"148.95"
                             },
                             "Comment":{
-                               "@":{
-
-                               },
-                               "$":"Confirm this is electric",
-                               ">":{
-
-                               }
+                               "$":"Confirm this is electric"
                             }
                          }
                       },
@@ -265,40 +160,16 @@ Example of the result:
                          "$":"\n            \n            \n            \n            \n        ",
                          ">":{
                             "ProductName":{
-                               "@":{
-
-                               },
-                               "$":"Baby Monitor",
-                               ">":{
-
-                               }
+                               "$":"Baby Monitor"
                             },
                             "Quantity":{
-                               "@":{
-
-                               },
-                               "$":"2",
-                               ">":{
-
-                               }
+                               "$":"2"
                             },
                             "USPrice":{
-                               "@":{
-
-                               },
-                               "$":"39.98",
-                               ">":{
-
-                               }
+                               "$":"39.98"
                             },
                             "ShipDate":{
-                               "@":{
-
-                               },
-                               "$":"1999-05-21",
-                               ">":{
-
-                               }
+                               "$":"1999-05-21"
                             }
                          }
                       }
