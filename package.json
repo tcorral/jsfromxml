@@ -1,7 +1,7 @@
 {
   "name": "jsfromxml",
-  "version": "1.0.5",
-  "description": "Parse xml to real json object",
+  "version": "1.1.0",
+  "description": "Parse xml to real json object and convert json to xml",
   "main": "src/index.js",
   "scripts": {
     "test": "grunt test"

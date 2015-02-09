@@ -15,12 +15,14 @@ I was very disappointed with the usage of other nodes so I decided to improve th
 values and their attributes.
 
 The root node will be a single member of the Javascript object.
+
 The children nodes will be contained in an object with the key *">"*.
 
 * If the key of one node exist just one time it will be an object with the key of the children name.
 * If the key of one node exist more than one time it will be an array with all the objects inside.
 
 The attributes will be contained in an object with the key *"@"*.
+
 The value of the node will be contained as a string in a member with the key *"$"*.
 
 Example XML code:
@@ -151,7 +153,7 @@ If you want to access the "Delivery Notes" value you just need to:
 var partNumber = json.PurchaseOrder[">"].DeliveryNotes;
 ```
 
-## Basic Usage
+## Basic Usage - XML to JSON
 
 ```javascript
 var parser = require('jsonfromxml');
@@ -162,9 +164,20 @@ parser.toJSONFromFile("path/to/a/xml/file.xml", function (err, json){
 });
 ```
 
+## Basic Usage - JSON to XML
+
+```javascript
+var parser = require('jsonfromxml');
+
+parser.toXMLFromFile("path/to/a/xml/file.json", function (err, xml){
+    // xml contains the xml in string format.
+    console.log(xml);
+});
+```
+
 ## API
 
-### toJSON(xml, callback)
+### toJsObject(xml, callback)
 
 Parameters:
 - xml - ```String```
@@ -176,7 +189,37 @@ Returns:
 #### Usage
 
 ```javascript
+parser.toJsObject(xml, callback);
+```
+
+### toJSON(xml, callback)
+
+Parameters:
+- xml - ```String```
+- callback - ```Function```
+
+Returns:
+- JSON - ```String```
+
+#### Usage
+
+```javascript
 parser.toJson(xml, callback);
+```
+
+### toJsObjectFromFile(filepath, callback)
+
+Parameters:
+- filepath - ```String```
+- callback - ```Function```
+
+Returns:
+- Javascript Object - ```Object```
+
+#### Usage
+
+```javascript
+parser.toJsObjectFromFile(filepath, callback);
 ```
 
 ### toJSONFromFile(filepath, callback)
@@ -194,6 +237,50 @@ Returns:
 parser.toJSONFromFile(filepath, callback);
 ```
 
+### toXML(js, callback)
+
+Parameters:
+- js - ```Object```
+- callback - ```Function```
+
+Returns:
+- XML - ```String```
+
+#### Usage
+
+```javascript
+parser.toXML(js, callback);
+```
+
+### toXMLFromJSON(json, callback)
+
+Parameters:
+- json - ```String```
+- callback - ```Function```
+
+Returns:
+- XML - ```String```
+
+#### Usage
+
+```javascript
+parser.toXMLFromJSON(json, callback);
+```
+
+### toXMLFromFile(filepath, callback)
+
+Parameters:
+- filepath - ```String```
+- callback - ```Function```
+
+Returns:
+- XML - ```String```
+
+#### Usage
+
+```javascript
+parser.toXMLFromFile(filepath, callback);
+```
 
 ## License
 (The MIT License)

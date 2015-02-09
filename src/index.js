@@ -1,59 +1,28 @@
-var fs = require('fs');
-var xmldoc = require('xmldoc');
-function addNode(node, obj){
-    var arr = [];
-    var _obj = {
-        '@': node.attr,
-        '$': node.val.replace(/\n/gi, '').trim(),
-        '>': {}
-    };
+var xml = require('../lib/xml');
+var json = require('../lib/json');
 
-    //console.log(node.name);
-
-    if(obj[node.name] && !Array.isArray(obj[node.name])){
-        arr.push(obj[node.name]);
-        obj[node.name] = arr;
-        obj[node.name].push(_obj);
-    }else{
-        obj[node.name] = _obj;
-    }
-
-    node.children.forEach(function (child){
-        addNode(child, _obj['>']);
-    });
-
-    if(node.children.length === 0){
-        delete _obj['>'];
-    }
-    if(Object.keys(_obj['@']).length === 0){
-        delete _obj['@'];
-    }
-    if(_obj['$'].length === 0){
-        delete _obj['$'];
-    }
-    if(Object.keys(_obj).length === 1 && _obj['$'] != null){
-        obj[node.name] = _obj['$'];
-    }
-}
-function converter(xml, callback){
-    var jsObj = {};
-    var document = new xmldoc.XmlDocument(xml);
-
-    try{
-        addNode(document, jsObj);
-        callback(null, jsObj);
-    }catch(er){
-        return callback(err);
-    }
-}
 module.exports = {
-    toJSON: converter,
-    toJSONFromFile: function (filePath, callback){
-        fs.readFile(filePath, 'UTF-8', function (err, xml) {
-            if (err) {
-                return console.log('Something went wrong!', err);
-            }
-            converter(xml, callback);
+    toJsObject: xml.xml2js,
+    toJSON: function (_xml, callback) {
+        xml.xml2js(_xml, function (err, js) {
+            callback(null, JSON.stringify(js));
         });
-    }
+    },
+    toJsObjectFromFile: xml.readXMLFileAndReturnsJS,
+    toJSONFromFile: function (filepath, callback) {
+        xml.readXMLFileAndReturnsJS(filepath, function (err, js) {
+           callback(null, JSON.stringify(js))
+        });
+    },
+    toXML: json.js2xml,
+    toXMLFromJSON: function (_json, callback){
+        var jsObject;
+        try{
+            jsObject = JSON.parse(_json);
+        }catch(err){
+            return callback(err);
+        }
+        json.js2xml(jsObject, callback);
+    },
+    toXMLFromFile: json.readJSONFileAndReturnXML
 };
