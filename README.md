@@ -1,4 +1,4 @@
-# JSfromXML is a XML to Javascript object converter
+# JSfromXML is a XML >< Javascript Object/JSON converter
 
 [![Build Status](https://travis-ci.org/tcorral/jsfromxml.png)](https://travis-ci.org/tcorral/jsfromxml)
 
