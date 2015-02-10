@@ -1,6 +1,7 @@
 # JSfromXML is a XML >< Javascript Object/JSON converter
 
 [![Build Status](https://travis-ci.org/tcorral/jsfromxml.png)](https://travis-ci.org/tcorral/jsfromxml)
+[![Code Climate](https://codeclimate.com/github/tcorral/jsfromxml/badges/gpa.svg)](https://codeclimate.com/github/tcorral/jsfromxml)
 
 This module reads your XML files and converts them to a Javascript object. Yes, I know that there are a lot XML to JSON converters
 and parsers but they did not work for me, because their leak of usability. The idea of this new converter is to
