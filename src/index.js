@@ -11,7 +11,7 @@ module.exports = {
     toJsObjectFromFile: xml.readXMLFileAndReturnsJS,
     toJSONFromFile: function (filepath, callback) {
         xml.readXMLFileAndReturnsJS(filepath, function (err, js) {
-           callback(null, JSON.stringify(js))
+           callback(null, JSON.stringify(js));
         });
     },
     toXML: json.js2xml,
